@@ -1,0 +1,10 @@
+{
+	"main" : "de.adp.service.ps.PSMainVerticle",
+
+	"description" : "Performance Support Service",
+	"licenses" : ["The Apache Software License Version 2.0"],
+	"author" : "Simon Schwantzer",
+
+	"keywords": ["assistance", "performance support",  "bpmn"],
+	"auto-redeploy": true
+}

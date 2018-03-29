@@ -1,0 +1,29 @@
+{
+	"webserver" : {
+		"port" : 8080,
+		"statics" : "static",
+		"basePath" : ""
+	},
+	"db" : {
+		"address": "vertx.mongopersistor",
+		"host": "localhost",
+		"port": 27017,
+		"pool_size": 10,
+		"db_name": "adp_db"
+	},
+	"auth" : {
+		"address" : "vertx.basicauthmanager",
+		"user_collection": "users",
+		"persistor_address": "vertx.mongopersistor",
+		"session_timeout": 1800000
+	},
+	"services" : {
+		"host" : "localhost",
+		"port" : 8080,
+		"secure" : false,
+		"paths" : {
+			"pki" : "/services/pki",
+			"ihs" : "/services/ihs"
+		}
+	}
+}
