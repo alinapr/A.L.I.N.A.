@@ -1,0 +1,36 @@
+<html>
+	<head><meta charset="UTF-8"><title>Maßnahmen</title>
+	
+	</head>
+	<body>
+		<h2>Anzeigen von Maßnahme zu Maschinenzustand</h2>
+		<h3><a onclick="loadMeasures('LoctiteLeer')">Loctite Leer</a></h3>
+		<h3><a onclick="loadMeasures('WerkstoffLeer')">Werkstoff Leer</a></h3>
+		<h3><a onclick="loadMeasures('AnlagenbedingteStoerung')">Anlagebedingte Störung</a></h3>
+		<h3><a onclick="loadMeasures('ExterneStoerung')">Externe Störung</a></h3>
+		<h3><a onclick="loadMeasures('Stillstand')">Stillstand</a></h3>
+		<h3><a onclick="loadMeasures('Warnung')">Warnung</a></h3>
+		<h3><a onclick="loadMeasures('WerkstoffWenig')">Werkstoff wenig</a></h3>
+		<h3><a onclick="loadMeasures('FettLeer')">Fett leer</a></h3>
+	
+	Benutzer auswählen:<br>
+	<input type="radio" name="currentUser" value="FritzTonker" checked="checked">Fritz Tonker</input><br>
+	<input type="radio" name="currentUser" value="BastianLohnert">Bastian Lohnert</input><br>
+	<input type="radio" name="currentUser" value="FriedrichTolle">Friedrich Tolle</input><br>
+	<input type="radio" name="currentUser" value="MatthiasBaber">Matthias Baber</input><br>
+	
+	<script type="text/javascript" src="./jquery.js"></script>
+	<script type="text/javascript">
+	 <!-- 
+	 function loadMeasures(measure){
+	 var buildUrl = "/supportmeasures/"+measure+"/for/"+$("input[name=currentUser]:checked").val();
+	 window.location = buildUrl;
+	}
+	 
+	 
+	 // -->
+		
+	</script>
+	
+	</body>
+</html>

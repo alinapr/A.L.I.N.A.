@@ -1,0 +1,10 @@
+{
+  "webserver" : {
+    "port" : 7082,
+    "basePath": "/services/measureservice"
+  },
+  "sparql":{
+	"ontologyPrefix": "app:",
+	"ontologyUri": "http://www.appsist.de/ontology/"	
+  }
+} 
