@@ -1,0 +1,10 @@
+{
+	"main" : "de.adp.service.cds.CDSMainVerticle",
+
+	"description" : "Service for handling content within a system instance.",
+	"licenses" : ["The Apache Software License Version 2.0"],
+	"author" : "Simon Schwantzer",
+
+	"keywords": ["content", "service"],
+	"auto-redeploy": true
+}

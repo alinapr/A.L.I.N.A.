@@ -1,0 +1,8 @@
+{
+  "webserver" : {
+	"port" : 8080,
+	"basePath" : ""
+  },
+  "staticContentPath" : "pathToContent/testing/static",
+  "contentPath" : "pathToContent/testing/packages"
+}
