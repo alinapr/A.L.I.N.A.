@@ -1,0 +1,8 @@
+1.1.0 -- 25.09.2015
+- Added action buttons to notifications.
+- Added methods to set and get session identifiers and authorization tokens for all types of actions.
+- Added method to retrieve latest location of a user.
+
+1.0.0 -- 24.09.2015
+- Version for integration in milestone 4.
+- Added API to display popups.
