@@ -1,0 +1,118 @@
+{
+    "webserver": {
+        "port": 8080,
+        "statics": "www"
+    },
+    "eventBusBridge": {
+		"inbound" : [
+			{"address" : "adp:service:iid:server"},
+			{"address_re" : "adp:service:iid:server:.+"}
+		],
+		"outbound" : [
+			{"address_re" : "adp:service:iid:client:.+"}
+		]
+	},
+	"deploys" : [
+		{
+			"id" : "io.vertx~mod-mongo-persistor~2.1.0",
+			"config" : {
+				"address": "vertx.mongopersistor",
+				"host": "localhost",
+				"port": 27017,
+				"pool_size": 10,
+				"db_name": "foo"
+			}
+		}
+	],
+    "services": {
+        "auth" : {
+			"version" : "0.1-SNAPSHOT",
+			"config" : {
+				"webserver" : {
+					"port" : 8081,
+					"statics" : "webroot",
+					"basePath" : "/services/auth"
+				},
+				"debugMode"	: true,
+				"mongoPersistorAddress" : "vertx.mongopersistor",
+				"hoursUntilSessionPurge" : 24
+			}
+    	},
+        "iid-server": {
+        	"version" : "0.1-SNAPSHOT",
+			"config" : {
+				"webserver" : {
+					"port" : 8082,
+					"basePath" : "/services/iid"
+				},
+				"deploys" : [],
+				"services" : {
+					"cds" : {
+						"http" : {
+							"host" : "localhost",
+							"port" : 8083,
+							"secure" : false,
+							"path" : "/services/cds"
+						}
+					},
+					"auth" : {
+						"eb" : "adp:service:auth"
+					}
+				},
+				"debugMode" : true
+			}
+		},
+        "cds": {
+            "version": "0.1-SNAPSHOT",
+            "config": {
+                "webserver": {
+                    "port": 8083,
+                    "basePath": "/services/cds"
+                },
+                "staticContentPath": "pathToContent/m3-demo/static",
+                "contentPath": "pathToContent/m3-demo/packages",
+                "iwb": {}
+            }
+        },
+        "pki": {
+        	"version" : "0.3-SNAPSHOT",
+        	"config" : {
+				"webserver" : {
+					"port" : 8084,
+					"statics" : "www",
+					"basePath" : "/services/pki"
+				},
+				"services" : {
+					"host" : "localhost",
+					"port" : 8080,
+					"secure" : false,
+					"baseUrl" : "/services"
+				},
+				"processEngine" : "simple",
+				"processDefinitionPath" : "pathToContent/m3-demo/pki"
+			}
+        },
+        "performance-support": {
+        	"version" : "0.2-SNAPSHOT",
+        	"config" : {
+				"webserver" : {
+					"port" : 8085,
+					"statics" : "static",
+					"basePath" : "/services/psd"
+				},
+				"db": "vertx.mongopersistor",
+                "auth": "vertx.basicauthmanager",
+				"services" : {
+					"host" : "localhost",
+					"port" : 8080,
+					"secure" : false,
+					"paths" : {
+						"pki" : "/services/pki",
+						"ihs" : "/services/ihs"
+					}
+				},
+				"debugMode" : true
+			}
+        }
+    }
+}

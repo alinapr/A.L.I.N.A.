@@ -1,0 +1,13 @@
+{
+  "webserver" : {
+    "port" : 7081,
+    "basePath": "/services/usermodel"
+  },
+  "sparql":{
+  	"reqBaseUrl": "localhost",
+	"reqPath": "/sparql",
+	"reqBasePort": "8443",
+	"ontologyPrefix": "app:",
+	"ontologyUri": "http://www.appsist.de/ontology/"	
+  }
+} 

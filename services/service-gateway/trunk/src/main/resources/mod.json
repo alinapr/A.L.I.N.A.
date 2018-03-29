@@ -1,0 +1,10 @@
+{
+	"main" : "de.adp.service.gateway.GatewayMainVerticle",
+
+	"description" : "The system service gateway orchestrates the services to an executable at runtime.",
+	"licenses" : ["The Apache Software License Version 2.0"],
+	"author" : "Simon Schwantzer",
+
+	"keywords": [ "service"],
+		"auto-redeploy": true
+}
