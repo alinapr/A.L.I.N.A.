@@ -1,0 +1,6 @@
+1.1.0 -- 25.09.2015
+- Added session identifier to user status information.
+
+1.0.0 -- 24.09.2015
+- Added API to retrieve public information for all users.
+- Tagged version for milestone 4.

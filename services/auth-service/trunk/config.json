@@ -1,0 +1,21 @@
+{
+	"webserver" : {
+		"port" : 8080,
+		"statics" : "webroot",
+		"basePath" : ""
+	},
+	"deploys" : [{
+			"id" : "io.vertx~mod-mongo-persistor~2.1.0",
+			"config" : {
+				"address": "vertx.mongopersistor",
+				"host": "localhost",
+				"port": 27017,
+				"pool_size": 10,
+				"db_name": "adp_db"
+			}
+		}
+	],
+	"debugMode"	: true,
+	"mongoPersistorAddress" : "vertx.mongopersistor",
+	"hoursUntilSessionPurge" : 24
+}
