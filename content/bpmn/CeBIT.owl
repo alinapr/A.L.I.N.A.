@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY terms "http://purl.org/dc/terms/" >
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+	<!ENTITY ontology "http://www.appsist.de/ontology/" >
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+	<!ENTITY BPMN "http://www.appsist.de/ontology/BPMN/" >
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+<rdf:RDF xmlns="http://www.appsist.de/ontology/demonstrator/demonstrator.owl#"
+         xml:base="http://www.appsist.de/ontology/demonstrator/demonstrator.owl"
+         xmlns:BPMN="http://www.appsist.de/ontology/BPMN/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:terms="http://purl.org/dc/terms/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xml="http://www.w3.org/XML/1998/namespace"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ontology="http://www.appsist.de/ontology/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <owl:Ontology rdf:about="http://www.appsist.de/ontology">
+    <rdfs:label xml:lang="de">APPsist Ontologie</rdfs:label>
+    <owl:versionInfo xml:lang="de">1.0</owl:versionInfo>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293">
+    <rdf:type rdf:resource="&ontology;Massnahme" />
+    <rdfs:label xml:lang="de">Übersicht</rdfs:label>
+    <terms:description xml:lang="de">Übersicht</terms:description>
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/6256d1a6-5c2b-4ede-8bbe-8f916990eaf0" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/045c71c1-8bdb-4cac-a198-2e67423e0a39" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1nsiqqk" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1qibcqt" />
+  </owl:NamedIndividual>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/6256d1a6-5c2b-4ede-8bbe-8f916990eaf0">
+    <rdfs:label xml:lang="de">A-Algorithmus</rdfs:label>
+    <terms:description xml:lang="de">A-Algorithmus</terms:description>
+    <rdf:type rdf:resource="&ontology;Aktivitaet" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/045c71c1-8bdb-4cac-a198-2e67423e0a39">
+    <rdfs:label xml:lang="de">B-Algorithmus</rdfs:label>
+    <terms:description xml:lang="de">B-Algorithmus</terms:description>
+    <rdf:type rdf:resource="&ontology;Aktivitaet" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1nsiqqk">
+    <rdfs:label xml:lang="de">Versorgungsgrundsaetze beachten</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1qibcqt">
+    <rdfs:label xml:lang="de">Situationsabhaengige HWS Immobilisation durchführen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <owl:NamedIndividual rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/045c71c1-8bdb-4cac-a198-2e67423e0a39">
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/eebb1a98-d77d-4e4b-ab00-044aef73a545" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0zc6nsm" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0j6jz09" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_17cbzj9" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1qomavb" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1vlm3kb" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1j3wpnu" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0ssdsrq" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0nkjt9a" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1swfei8" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1foejsw" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1x527i4" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1y23uw3" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1uelmhr" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0knbbsb" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0s0z5kv" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1lqztsd" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1k42jgh" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_08bat4s" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_00va51v" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_105tkk8" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1rl77ew" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0x2ecgn" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1kn1vyv" />
+  </owl:NamedIndividual>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/eebb1a98-d77d-4e4b-ab00-044aef73a545">
+    <rdfs:label xml:lang="de">Reanimation</rdfs:label>
+    <rdf:type rdf:resource="&ontology;Aktivitaet" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0zc6nsm">
+    <rdfs:label xml:lang="de">Auf Apnoe oder Schnappatmung untersuchen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0j6jz09">
+    <rdfs:label xml:lang="de">Entlastungskriterien Spannungspneumothorax suchen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_17cbzj9">
+    <rdfs:label xml:lang="de">Kontrollierte Beatmung mit hoher FiO2</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1qomavb">
+    <rdfs:label xml:lang="de">Auf Spannungspneu untersuchen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1vlm3kb">
+    <rdfs:label xml:lang="de">Situationsabhaenige initiale O2-Gabe</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1j3wpnu">
+    <rdfs:label xml:lang="de">Auf Aspiration und kardiale Erkrankungen untersuchen/erfragen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0ssdsrq">
+    <rdfs:label xml:lang="de">Beurteilung der Belueftung</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0nkjt9a">
+    <rdfs:label xml:lang="de">Atemfrequenz ermitteln</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1swfei8">
+    <rdfs:label xml:lang="de">Abfrage Atemwegssicherung</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1foejsw">
+    <rdfs:label xml:lang="de">Assistierte normfrequente Beatmung mit hoher FiO2</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1x527i4">
+    <rdfs:label xml:lang="de">Assistierte normofrequente Beatmung mit hoher FiO2 ggf. CPAP/NIV Protokoll</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1y23uw3">
+    <rdfs:label xml:lang="de">Pruefe Atemfrequenz</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1uelmhr">
+    <rdfs:label xml:lang="de">Auskultation durchfuehren</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0knbbsb">
+    <rdfs:label xml:lang="de">Auf Obstruktion untersuchen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0s0z5kv">
+    <rdfs:label xml:lang="de">Situationsabhaenige initiale O2-Gabe</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1lqztsd">
+    <rdfs:label xml:lang="de">Nach Anzeichen einer Zyanose suchen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1k42jgh">
+    <rdfs:label xml:lang="de">Auf abnormale Atemgeraeusche achten</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_08bat4s">
+    <rdfs:label xml:lang="de">Algorithmus Obstruktive Atemnot</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_00va51v">
+    <rdfs:label xml:lang="de">Erweiterte Atemwegssicherung</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_105tkk8">
+    <rdfs:label xml:lang="de">Lungenoedem</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1rl77ew">
+    <rdfs:label xml:lang="de">Lungenoedem</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0x2ecgn">
+    <rdfs:label xml:lang="de">Entlastungspunktion durchfuehren</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1kn1vyv">
+    <rdfs:label xml:lang="de">Erweiterte Atemwegssicherung</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <owl:NamedIndividual rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/6256d1a6-5c2b-4ede-8bbe-8f916990eaf0">
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/UserTask_1m3ebxh" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/UserTask_02zn4l7" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0dy2cro" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0ozfkr3" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0an14a7" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_17y7rea" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/CallActivity_1jgibuv" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1ikrk77" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/CallActivity_0eshqb5" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/CallActivity_08agi3k" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1kjhxot" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/CallActivity_0byondo" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_13mzsy1" />
+  </owl:NamedIndividual>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/UserTask_1m3ebxh">
+    <rdfs:label xml:lang="de">Pruefe ob Atemweg frei ist</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/UserTask_02zn4l7">
+    <rdfs:label xml:lang="de">Patient in Seitenlage bringen/absaugen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0dy2cro">
+    <rdfs:label xml:lang="de">Ersteindruck gewinnen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0ozfkr3">
+    <rdfs:label xml:lang="de">Auf Trauma des Atemweges oder des Mittelgesichtes untersuchen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0an14a7">
+    <rdfs:label xml:lang="de">Auf Anzeichen fuer Atemwegsverlegung suchen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_17y7rea">
+    <rdfs:label xml:lang="de">Atemwegsverlegung ausschließen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/CallActivity_1jgibuv">
+    <rdfs:label xml:lang="de">Adrenalinverneblung durchfuehren</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1ikrk77">
+    <rdfs:label xml:lang="de">Einfache Atemwegssicherung</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/CallActivity_0eshqb5">
+    <rdfs:label xml:lang="de">Einfache Atemwegssicherung</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/CallActivity_08agi3k">
+    <rdfs:label xml:lang="de">Fremdkoerperentfernung</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1kjhxot">
+    <rdfs:label xml:lang="de">Manuelle Fixation der Halswirbelsaeule</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/CallActivity_0byondo">
+    <rdfs:label xml:lang="de">Erweiterte Atemwegssicherung</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_13mzsy1">
+    <rdfs:label xml:lang="de">Erweiterte Atemwegssicherung</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <owl:NamedIndividual rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/eebb1a98-d77d-4e4b-ab00-044aef73a545">
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0kcezqh" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1vutaw9" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_14xg4c1" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0nbv1b3" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_023cey4" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0wsrex3" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0w9slfi" />
+    <ontology:hatSchritt rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0xk00ej" />
+  </owl:NamedIndividual>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0kcezqh">
+    <rdfs:label xml:lang="de">Leitsymptom Herz- Kreislaufstillstand liegt vor</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1vutaw9">
+    <rdfs:label xml:lang="de">CPR starten und Nachforderung Notarzt</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_14xg4c1">
+    <rdfs:label xml:lang="de">Defibrillator vorbereiten</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0nbv1b3">
+    <rdfs:label xml:lang="de">Patchelektroden anbringen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_023cey4">
+    <rdfs:label xml:lang="de">Rhytmusanalyse durchfuehren</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0wsrex3">
+    <rdfs:label xml:lang="de">1x Defibrillation ausfuehren</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0w9slfi">
+    <rdfs:label xml:lang="de">Durchfuehrung der HDM/Beatmung</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+  <rdf:Description rdf:about="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_0xk00ej">
+    <rdfs:label xml:lang="de">Nach Zeichen des Lebens suchen</rdfs:label>
+    <rdf:type rdf:resource="&ontology;ElementarerSchritt" />
+  </rdf:Description>
+</rdf:RDF>

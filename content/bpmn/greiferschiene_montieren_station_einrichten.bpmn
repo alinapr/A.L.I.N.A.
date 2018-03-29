@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://sourceforge.net/bpmn/definitions/_1467642989194" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yaoqiang="http://bpmn.sourceforge.net" exporter="Yaoqiang BPMN Editor" exporterVersion="5.0" expressionLanguage="http://www.w3.org/1999/XPath" id="_1467642989194" name="" targetNamespace="http://sourceforge.net/bpmn/definitions/_1467642989194" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+  <process id="cffbf420-1f37-11e5-b5f7-727283247c7f" isClosed="false" isExecutable="true" processType="None">
+    <extensionElements>
+      <localData xmlns="appsist:bpmn:annotations">
+        <string key="processId">cffbf420-1f37-11e5-b5f7-727283247c7f</string>
+        <string key="processName">Station einrichten</string>
+        <string key="processDescription">Teilmaßnahme zum Einrichten der Station im Zuge der Greiferschienenmontage</string>
+        <!--string key="jobId">12345</string-->
+      </localData>
+      <yaoqiang:pageFormat height="841.8897637795276" imageableHeight="831.8897637795276" imageableWidth="588.1102362204724" imageableX="5.0" imageableY="5.0" orientation="0" width="598.1102362204724" />
+      <yaoqiang:page background="#FFFFFF" horizontalCount="1" verticalCount="1" />
+    </extensionElements>
+    <userTask completionQuantity="1" id="_3" implementation="##unspecified" isForCompensation="false" name="Greiferstation einrichten" startQuantity="1">
+      <incoming>_7</incoming>
+      <outgoing>_16</outgoing>
+    </userTask>
+    <serviceTask completionQuantity="1" id="_4" implementation="##WebService" isForCompensation="false" name="Nächsten Prozess triggern" startQuantity="1">
+      <extensionElements>
+        <localData xmlns="appsist:bpmn:annotations">
+          <string key="completedMeasureId">http://www.appsist.de/ontology/bul/cffbf420-1f37-11e5-b5f7-727283247c7f</string>
+          <string key="targetGroup">http://www.appsist.de/ontology/bul/ArbeitsplatzgruppeWerkzeugbau</string>
+        </localData>
+        <events xmlns="appsist:bpmn:annotations">
+          <event eventId="measureCompleted" type="onEnd">
+            <properties>
+              <entry key="measureId" reference="completedMeasureId" />
+              <entry key="targetGroup" reference="targetGroup" />
+              <object key="context">
+                <entry key="jobId" reference="jobId" />
+              </object>
+            </properties>
+          </event>
+        </events>
+      </extensionElements>
+      <incoming>_16</incoming>
+      <outgoing>_12</outgoing>
+    </serviceTask>
+    <sequenceFlow id="_7" sourceRef="_2" targetRef="_3" />
+    <startEvent id="_2" isInterrupting="true" name="Start Event" parallelMultiple="false">
+      <outgoing>_7</outgoing>
+      <outputSet />
+    </startEvent>
+    <sequenceFlow id="_12" sourceRef="_4" targetRef="_11" />
+    <endEvent id="_11" name="End Event">
+      <incoming>_12</incoming>
+      <inputSet />
+    </endEvent>
+    <sequenceFlow id="_16" sourceRef="_3" targetRef="_4" />
+  </process>
+  <bpmndi:BPMNDiagram id="Yaoqiang_Diagram-cffbf420-1f37-11e5-b5f7-727283247c7f" name="Untitled Diagram" resolution="96.0">
+    <bpmndi:BPMNPlane bpmnElement="cffbf420-1f37-11e5-b5f7-727283247c7f">
+      <bpmndi:BPMNShape bpmnElement="_3" id="Yaoqiang-_3">
+        <dc:Bounds height="55.0" width="85.0" x="98.74999999999997" y="209.25" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="34.8359375" width="72.0" x="105.24999999999997" y="221.33203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" id="Yaoqiang-_4">
+        <dc:Bounds height="55.0" width="85.0" x="101.24999999999997" y="409.25" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="49.8359375" width="52.0" x="117.74999999999997" y="413.83203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" id="Yaoqiang-_2">
+        <dc:Bounds height="32.0" width="32.0" x="137.24999999999997" y="76.5" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="59.0" x="123.74999999999997" y="116.58203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_11" id="Yaoqiang-_11">
+        <dc:Bounds height="32.0" width="32.0" x="124.74999999999997" y="489.0" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="54.0" x="113.74999999999997" y="529.08203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_16" id="Yaoqiang-_16">
+        <di:waypoint x="142.49999999999997" y="264.0" />
+        <di:waypoint x="142.49999999999997" y="409.0" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="6.0" x="139.49999999999997" y="326.58203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_12" id="Yaoqiang-_12">
+        <di:waypoint x="140.74999999999997" y="464.0" />
+        <di:waypoint x="140.74999999999997" y="489.00021701536065" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="6.0" x="137.74999999999997" y="466.58213975768035" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7" id="Yaoqiang-_7">
+        <di:waypoint x="153.24999999999997" y="108.99457373264099" />
+        <di:waypoint x="153.24999999999997" y="209.0" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="6.0" x="150.24999999999997" y="149.0793181163205" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

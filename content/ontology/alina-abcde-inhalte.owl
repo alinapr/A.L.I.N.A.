@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY terms "http://purl.org/dc/terms/" >
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+	<!ENTITY ontology "http://www.appsist.de/ontology/" >
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+	<!ENTITY BPMN "http://www.appsist.de/ontology/BPMN/" >
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+<rdf:RDF xmlns="http://www.appsist.de/ontology/demonstrator/demonstrator.owl#"
+xml:base="http://www.appsist.de/ontology/demonstrator/demonstrator.owl"
+    xmlns:BPMN="http://www.appsist.de/ontology/BPMN/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ontology="http://www.appsist.de/ontology/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <owl:NamedIndividual rdf:about="&ontology;ABCDE-001-Grundsaetze">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1nsiqqk" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;ABCDE-002-HWSImmobilisation">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/Task_1nsiqqk" />
+  </owl:NamedIndividual>
+</rdf:RDF>

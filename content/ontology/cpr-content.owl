@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY terms "http://purl.org/dc/terms/" >
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+	<!ENTITY ontology "http://www.appsist.de/ontology/" >
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+	<!ENTITY BPMN "http://www.appsist.de/ontology/BPMN/" >
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+<rdf:RDF xmlns="http://www.appsist.de/ontology/demonstrator/demonstrator.owl#"
+xml:base="http://www.appsist.de/ontology/demonstrator/demonstrator.owl"
+    xmlns:BPMN="http://www.appsist.de/ontology/BPMN/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ontology="http://www.appsist.de/ontology/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <owl:NamedIndividual rdf:about="&ontology;CPR-001-Beurteile_die_Cirkulation">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/eebb1a98-d77d-4e4b-ab00-044aef73a545/Task_0kcezqh" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;CPR-002-CPR_starten_und_Nachforderung_Notarzt">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/eebb1a98-d77d-4e4b-ab00-044aef73a545/Task_1vutaw9" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;CPR-003-Defibrillator_vorbereiten">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/eebb1a98-d77d-4e4b-ab00-044aef73a545/Task_14xg4c1" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;CPR-004-Defi_Patchelektroden_anbringen">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/eebb1a98-d77d-4e4b-ab00-044aef73a545/Task_0nbv1b3" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;CPR-005-Rhythmusanalyse_durchfuehren">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/eebb1a98-d77d-4e4b-ab00-044aef73a545/Task_023cey4" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;CPR-006-Defibrillation_ausfuehren">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/eebb1a98-d77d-4e4b-ab00-044aef73a545/Task_0wsrex3" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;CPR-007-Durchfuehren_der_Herzdruckmassage">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/eebb1a98-d77d-4e4b-ab00-044aef73a545/Task_0w9slfi" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;CPR-008-Nach_Zeichen_des_Lebens_suchen">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/eebb1a98-d77d-4e4b-ab00-044aef73a545/Task_0xk00ej" />
+  </owl:NamedIndividual>
+</rdf:RDF>

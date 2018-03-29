@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://sourceforge.net/bpmn/definitions/_1467642130398" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yaoqiang="http://bpmn.sourceforge.net" exporter="Yaoqiang BPMN Editor" exporterVersion="5.0" expressionLanguage="http://www.w3.org/1999/XPath" id="_1467642130398" name="" targetNamespace="http://sourceforge.net/bpmn/definitions/_1467642130398" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+  <process id="cffbd2a6-1f37-11e5-b5f7-727283247c7f" isClosed="false" isExecutable="true" processType="None">
+    <extensionElements>
+      <localData xmlns="appsist:bpmn:annotations">
+        <string key="processId">cffbd2a6-1f37-11e5-b5f7-727283247c7f</string>
+        <string key="processName">Vormontage Greiferstation</string>
+        <string key="processDescription">Teilmaßnahme zur Vormontage der Greiferstation im Zuge der Greiferschienenmontage</string>
+        <!--string key="jobId">12345</string-->
+      </localData>
+      <yaoqiang:pageFormat height="841.8897637795276" imageableHeight="831.8897637795276" imageableWidth="588.1102362204724" imageableX="5.0" imageableY="5.0" orientation="0" width="598.1102362204724" />
+      <yaoqiang:page background="#FFFFFF" horizontalCount="1" verticalCount="1" />
+    </extensionElements>
+    <startEvent id="_58" isInterrupting="true" name="Montage Greiferstation" parallelMultiple="false">
+      <outgoing>_59</outgoing>
+      <outputSet />
+    </startEvent>
+    <userTask completionQuantity="1" id="_36" implementation="##unspecified" isForCompensation="false" name="Anfertigungsteile fertigstellen" startQuantity="1">
+      <incoming>_59</incoming>
+      <outgoing>_60</outgoing>
+    </userTask>
+    <userTask completionQuantity="1" id="_47" implementation="##unspecified" isForCompensation="false" name="Vormontage Greiferstation" startQuantity="1">
+      <incoming>_60</incoming>
+      <outgoing>_6</outgoing>
+    </userTask>
+    <sequenceFlow id="_59" sourceRef="_58" targetRef="_36" />
+    <sequenceFlow id="_60" sourceRef="_36" targetRef="_47" />
+    <serviceTask completionQuantity="1" id="_5" implementation="##WebService" isForCompensation="false" name="Nächsten Prozess triggern" startQuantity="1">
+      <extensionElements>
+        <localData xmlns="appsist:bpmn:annotations">
+          <string key="completedMeasureId">http://www.appsist.de/ontology/bul/cffbd2a6-1f37-11e5-b5f7-727283247c7f</string>
+          <string key="requestedMeasureId">http://www.appsist.de/ontology/bul/cffbd9a4-1f37-11e5-b5f7-727283247c7f</string>
+          <string key="targetGroup">http://www.appsist.de/ontology/bul/ArbeitsplatzgruppeWerkzeugbau</string>
+        </localData>
+        <events xmlns="appsist:bpmn:annotations">
+          <event eventId="measureCompleted" type="onEnd">
+            <properties>
+              <entry key="measureId" reference="completedMeasureId" />
+              <entry key="targetGroup" reference="targetGroup" />
+              <object key="context">
+                <entry key="jobId" reference="jobId" />
+              </object>
+            </properties>
+          </event>
+          <event eventId="measureRequested" type="onEnd">
+            <properties>
+              <entry key="measureId" reference="requestedMeasureId" />
+              <entry key="targetGroup" reference="targetGroup" />
+              <object key="context">
+                <entry key="jobId" reference="jobId" />
+              </object>
+            </properties>
+          </event>
+        </events>
+      </extensionElements>
+      <incoming>_6</incoming>
+      <outgoing>_7</outgoing>
+    </serviceTask>
+    <sequenceFlow id="_7" sourceRef="_5" targetRef="_61" />
+    <endEvent id="_61" name="End Event">
+      <incoming>_7</incoming>
+      <inputSet />
+    </endEvent>
+    <sequenceFlow id="_6" sourceRef="_47" targetRef="_5" />
+  </process>
+  <bpmndi:BPMNDiagram id="Yaoqiang_Diagram-cffbd2a6-1f37-11e5-b5f7-727283247c7f" name="Untitled Diagram" resolution="96.0">
+    <bpmndi:BPMNPlane bpmnElement="cffbd2a6-1f37-11e5-b5f7-727283247c7f">
+      <bpmndi:BPMNShape bpmnElement="_58" id="Yaoqiang-_58">
+        <dc:Bounds height="32.0" width="32.0" x="154.72222222222223" y="28.33333333333333" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="116.0" x="112.72222222222217" y="68.41536458333331" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_36" id="Yaoqiang-_36">
+        <dc:Bounds height="55.0" width="85.0" x="123.16743537929148" y="109.16030186324966" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="49.8359375" width="72.0" x="129.66743537929148" y="113.74233311324966" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_47" id="Yaoqiang-_47">
+        <dc:Bounds height="55.0" width="85.0" x="123.16743537929148" y="207.23415826396058" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="34.8359375" width="72.0" x="129.66743537929148" y="219.31618951396058" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" id="Yaoqiang-_5">
+        <dc:Bounds height="55.0" width="85.0" x="116.99999999999997" y="327.25" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="49.8359375" width="52.0" x="133.49999999999997" y="331.83203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_61" id="Yaoqiang-_61">
+        <dc:Bounds height="32.0" width="32.0" x="149.3038846928069" y="429.38671361076626" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="54.0" x="138.3038846928069" y="469.46874486076626" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_7" id="Yaoqiang-_7">
+        <di:waypoint x="165.3038846928069" y="382.0" />
+        <di:waypoint x="165.3038846928069" y="429.00692082749237" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="6.0" x="162.3038846928069" y="395.5854916637462" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6" id="Yaoqiang-_6">
+        <di:waypoint x="162.5837176896457" y="262.0" />
+        <di:waypoint x="162.5837176896457" y="327.0" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="6.0" x="159.5837176896457" y="284.58203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_59" id="Yaoqiang-_59">
+        <di:waypoint x="170.72222222222223" y="59.99961419287939" />
+        <di:waypoint x="170.72222222222223" y="109.0" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="6.0" x="167.72222222222223" y="74.5818383464397" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_60" id="Yaoqiang-_60">
+        <di:waypoint x="165.66743537929148" y="164.0" />
+        <di:waypoint x="165.66743537929148" y="207.0" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="6.0" x="162.66743537929148" y="175.58203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+  		<meta charset="utf-8">
+
+  		<title>Reanimation durchführen</title>
+  		<meta name="author" content="mschmuck">
+
+  		<link rel="stylesheet" href="css/styles.css"> 
+  		<script language="JavaScript" type="text/javascript" src="js/scripts_rea.js"></script> 
+  		<script language="JavaScript" type="text/javascript" src="js/Chart.min.js"></script> 
+	<!--	<script language="JavaScript" type="text/javascript" src="js/linechart_cebit.js"></script> -->
+		<script language="JavaScript" type="text/javascript" src="js/barchart_cebit.js"></script> 
+	</head>
+
+	<body>
+	 
+		<table height="500px" width="100%"> 
+			<tr><td width="70%"><div class="square">
+
+				<h3>Unterbrechungen vermeiden</h3>
+					<b>Medikamente Erwachsene:</b><br>
+					<p>
+						<i>Defibrillierbar: </i><br>
+						<ul type="disc"> 
+							<li>1mg Adrenalin nach der 3. Defibrillation, dann alle 3-5 Minuten im Verlauf (jeder 2. Zyklus)</li>
+							<li>300mg Amiodaron nach der 3. Defibrillation, erwäge einmalig weitere 150mg im Verlauf</li>
+						</ul>
+					</p>
+					<p>
+						<i>Nicht Defibrillierbar: </i><br>
+						<ul type="disc"> 
+							<li>1mg Adrenalin sobald Zugang etabliert, dann alle 3-5 Minutem im Verlauf (jeder 2. Zyklus)</li>
+						</ul>
+					</p>
+
+				<div></td><td><div class="circle" align="center"><br><br><br><br><h2>120bpm<h2></div></td></tr>
+			<tr><td><div class="square" align="center"><h2><b>Gesamtzeit: <time id="total_time">00:00:00</time></b></h2><br><br><button id="but_ss_rea" onclick="start_stopp_rea()">Start</button>&emsp;<button id="" onclick="clear_stopwatch()">Reset</button><div></td><td><div class="square"><div align="center"><h1 id="countdown">02:00</h1><br><span id="anz_zyklus">x.</span> Zyklus<br><button id="but_zyk" onclick="but_zyk_reset()">Reset</button><div></div></td></tr>
+		</table>
+
+		<div class="square"> 
+	<!--		<canvas id="lineChart"></canvas> -->
+    		<canvas id="barChart"></canvas>
+		</div>
+	</body>
+</html>

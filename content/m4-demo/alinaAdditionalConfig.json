@@ -1,0 +1,11 @@
+,
+    "nsa-service":{
+      "version":"1.0.0",
+      "config":{
+        "webserver":{
+          "port":8090,
+          "statics":"www",
+          "basePath":"/services/nsaservice"
+        }
+      }
+    }

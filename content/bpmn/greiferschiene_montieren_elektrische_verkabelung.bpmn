@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://sourceforge.net/bpmn/definitions/_1467642859670" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yaoqiang="http://bpmn.sourceforge.net" exporter="Yaoqiang BPMN Editor" exporterVersion="5.0" expressionLanguage="http://www.w3.org/1999/XPath" id="_1467642859670" name="" targetNamespace="http://sourceforge.net/bpmn/definitions/_1467642859670" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+  <process id="cffbedcc-1f37-11e5-b5f7-727283247c7f" isClosed="false" isExecutable="true" processType="None">
+    <extensionElements>
+      <localData xmlns="appsist:bpmn:annotations">
+        <string key="processId">cffbedcc-1f37-11e5-b5f7-727283247c7f</string>
+        <string key="processName">Elektrische Verkabelung</string>
+        <string key="processDescription">Teilmaßnahme zur elektrischen Verkabelung im Zuge der Greiferschienenmontage</string>
+        <!--string key="jobId">12345</string-->
+      </localData>
+      <yaoqiang:pageFormat height="841.8897637795276" imageableHeight="831.8897637795276" imageableWidth="588.1102362204724" imageableX="5.0" imageableY="5.0" orientation="0" width="598.1102362204724" />
+      <yaoqiang:page background="#FFFFFF" horizontalCount="1" verticalCount="1" />
+    </extensionElements>
+    <startEvent id="_3" isInterrupting="true" name="Start Event" parallelMultiple="false">
+      <outgoing>_5</outgoing>
+      <outputSet />
+    </startEvent>
+    <userTask completionQuantity="1" id="_4" implementation="##unspecified" isForCompensation="false" name="Elektrische Verkabelung vornehmen" startQuantity="1">
+      <incoming>_5</incoming>
+      <outgoing>_6</outgoing>
+    </userTask>
+    <sequenceFlow id="_5" sourceRef="_3" targetRef="_4" />
+    <endEvent id="_2" name="End Event">
+      <incoming>_12</incoming>
+      <inputSet />
+    </endEvent>
+    <serviceTask completionQuantity="1" id="_7" implementation="##WebService" isForCompensation="false" name="Nächsten Prozess triggern" startQuantity="1">
+      <extensionElements>
+        <localData xmlns="appsist:bpmn:annotations">
+          <string key="completedMeasureId">http://www.appsist.de/ontology/bul/cffbedcc-1f37-11e5-b5f7-727283247c7f</string>
+          <string key="requestedMeasureId">http://www.appsist.de/ontology/bul/cffbf420-1f37-11e5-b5f7-727283247c7f</string>
+          <string key="targetGroup">http://www.appsist.de/ontology/bul/ArbeitsplatzgruppeWerkzeugbau</string>
+        </localData>
+        <events xmlns="appsist:bpmn:annotations">
+          <event eventId="measureCompleted" type="onEnd">
+            <properties>
+              <entry key="measureId" reference="completedMeasureId" />
+              <entry key="targetGroup" reference="targetGroup" />
+              <object key="context">
+                <entry key="jobId" reference="jobId" />
+              </object>
+            </properties>
+          </event>
+          <event eventId="measureRequested" type="onEnd">
+            <properties>
+              <entry key="measureId" reference="requestedMeasureId" />
+              <entry key="targetGroup" reference="targetGroup" />
+              <object key="context">
+                <entry key="jobId" reference="jobId" />
+              </object>
+            </properties>
+          </event>
+        </events>
+      </extensionElements>
+      <incoming>_6</incoming>
+      <outgoing>_12</outgoing>
+    </serviceTask>
+    <sequenceFlow id="_12" sourceRef="_7" targetRef="_2" />
+    <sequenceFlow id="_6" sourceRef="_4" targetRef="_7" />
+  </process>
+  <bpmndi:BPMNDiagram id="Yaoqiang_Diagram-cffbedcc-1f37-11e5-b5f7-727283247c7f" name="Untitled Diagram" resolution="96.0">
+    <bpmndi:BPMNPlane bpmnElement="cffbedcc-1f37-11e5-b5f7-727283247c7f">
+      <bpmndi:BPMNShape bpmnElement="_3" id="Yaoqiang-_3">
+        <dc:Bounds height="32.0" width="32.0" x="139.74999999999997" y="55.25" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="59.0" x="126.24999999999997" y="95.33203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" id="Yaoqiang-_4">
+        <dc:Bounds height="55.0" width="85.0" x="116.49999999999997" y="147.0" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="49.8359375" width="67.0" x="125.49999999999997" y="151.58203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" id="Yaoqiang-_2">
+        <dc:Bounds height="32.0" width="32.0" x="165.74999999999997" y="453.75" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="54.0" x="154.74999999999997" y="493.83203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" id="Yaoqiang-_7">
+        <dc:Bounds height="55.0" width="85.0" x="114.99999999999997" y="340.5" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="49.8359375" width="52.0" x="131.49999999999997" y="345.08203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_12" id="Yaoqiang-_12">
+        <di:waypoint x="181.74999999999997" y="396.0" />
+        <di:waypoint x="181.74999999999997" y="454.00021701536065" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="6.0" x="178.74999999999997" y="415.08213975768035" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6" id="Yaoqiang-_6">
+        <di:waypoint x="158.24999999999997" y="202.0" />
+        <di:waypoint x="158.24999999999997" y="341.0" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="6.0" x="155.24999999999997" y="261.58203125" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5" id="Yaoqiang-_5">
+        <di:waypoint x="155.74999999999997" y="86.99978298463937" />
+        <di:waypoint x="155.74999999999997" y="147.0" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="6.0" x="152.74999999999997" y="107.08192274231968" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

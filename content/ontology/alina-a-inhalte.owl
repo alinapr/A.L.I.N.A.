@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY terms "http://purl.org/dc/terms/" >
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+	<!ENTITY ontology "http://www.appsist.de/ontology/" >
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+	<!ENTITY BPMN "http://www.appsist.de/ontology/BPMN/" >
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+<rdf:RDF xmlns="http://www.appsist.de/ontology/demonstrator/demonstrator.owl#"
+xml:base="http://www.appsist.de/ontology/demonstrator/demonstrator.owl"
+    xmlns:BPMN="http://www.appsist.de/ontology/BPMN/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ontology="http://www.appsist.de/ontology/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <owl:NamedIndividual rdf:about="&ontology;A-001-Ersteindruck">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/6256d1a6-5c2b-4ede-8bbe-8f916990eaf0/Task_0dy2cro" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;A-008-Atemwegsverlegung-auschliessen">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/6256d1a6-5c2b-4ede-8bbe-8f916990eaf0/UserTask_02zn4l7" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;A-009-Atemwegsverlegung-auschliessen">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/6256d1a6-5c2b-4ede-8bbe-8f916990eaf0/CallActivity_1jgibuv" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;A-004-Trauma">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/6256d1a6-5c2b-4ede-8bbe-8f916990eaf0/Task_0ozfkr3" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;A-002-Atemwegsverlegung">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/6256d1a6-5c2b-4ede-8bbe-8f916990eaf0/Task_0an14a7" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;A-006-Atemwegsverlegung-ausschliessen">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/6256d1a6-5c2b-4ede-8bbe-8f916990eaf0/Task_17y7rea" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;A-003-Atemwegsverlegung">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/6256d1a6-5c2b-4ede-8bbe-8f916990eaf0/Task_1ikrk77" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;A-005-Trauma">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/6256d1a6-5c2b-4ede-8bbe-8f916990eaf0/Task_1kjhxot" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;A-007-Atemwegsverlegung-ausschliessen">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;20be7887-640a-4b0e-8930-48a51a0aa293/6256d1a6-5c2b-4ede-8bbe-8f916990eaf0/Task_13mzsy1" />
+  </owl:NamedIndividual>
+</rdf:RDF>

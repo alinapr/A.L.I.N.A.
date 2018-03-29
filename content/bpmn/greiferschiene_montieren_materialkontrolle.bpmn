@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://bpmn.io/schema/bpmn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yaoqiang="http://bpmn.sourceforge.net" exporter="Camunda Modeler" exporterVersion="1.5.1" expressionLanguage="http://www.w3.org/1999/XPath" id="_1466173650291" name="" targetNamespace="http://bpmn.io/schema/bpmn" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+  <process id="cffbc9dc-1f37-11e5-b5f7-727283247c7f" isClosed="false" isExecutable="true" processType="None">
+    <extensionElements>
+      <localData xmlns="appsist:bpmn:annotations">
+        <string key="processId">cffbc9dc-1f37-11e5-b5f7-727283247c7f</string>
+        <string key="processName">Greiferschienenmontage Materialkontrolle</string>
+        <string key="processDescription">Teilmaßnahme zur Materialkontrolle im Zuge der Greiferschienenmontage
+                </string>
+        <string key="jobId">12345</string>
+        <array key="defaultWay">
+            <string key="node">_18</string>
+            <string key="node">_22</string>
+            <string key="node">_32</string>
+        </array>
+      </localData>
+    </extensionElements>
+    <startEvent id="StartEvent_1" isInterrupting="true" name="Materialkontrolle" parallelMultiple="false">
+      <outgoing>SequenceFlow_0ks789s</outgoing>
+      <outputSet/>
+    </startEvent>
+    <sequenceFlow id="SequenceFlow_0ks789s" sourceRef="StartEvent_1" targetRef="_18"/>
+    <userTask completionQuantity="1" id="_18" implementation="##unspecified" isForCompensation="false" name="Bereitgestelltes Material kontrollieren" startQuantity="1">
+      <incoming>SequenceFlow_0ks789s</incoming>
+      <outgoing>SequenceFlow_029280b</outgoing>
+    </userTask>
+    <exclusiveGateway gatewayDirection="Diverging" id="ExclusiveGateway_16n2v7z" name="Ist das Material vollständig vorhanden?">
+      <extensionElements>
+        <localData xmlns="appsist:bpmn:annotations">
+          <string key="requestMessage">Ist das Material vollständig vorhanden?</string>
+          <array key="responseOptions">
+            <object>
+              <string key="display">Ja</string>
+              <string key="target">EndEvent_1ob6ah2</string>
+            </object>
+            <object>
+              <string key="display">Nein</string>
+              <string key="target">_22</string>
+            </object>
+          </array>
+        </localData>
+        <events xmlns="appsist:bpmn:annotations">
+          <event eventId="processEvent:userRequest" type="onStart">
+            <properties>
+              <entry key="processInstanceId" reference="processInstanceId"/>
+              <entry key="processId" reference="processId"/>
+              <object key="request">
+                <entry key="message" reference="requestMessage"/>
+                <entry key="options" reference="responseOptions"/>
+              </object>
+            </properties>
+          </event>
+        </events>
+      </extensionElements>
+      <incoming>SequenceFlow_029280b</incoming>
+      <outgoing>SequenceFlow_0shpvql</outgoing>
+      <outgoing>SequenceFlow_1l3d3mv</outgoing>
+      <outgoing>_2</outgoing>
+    </exclusiveGateway>
+    <sequenceFlow id="SequenceFlow_029280b" sourceRef="_18" targetRef="ExclusiveGateway_16n2v7z"/>
+    <sequenceFlow id="SequenceFlow_0shpvql" name="nein" sourceRef="ExclusiveGateway_16n2v7z" targetRef="_22"/>
+    <userTask completionQuantity="1" id="_22" implementation="##unspecified" isForCompensation="false" name="Einkauf kontaktieren" startQuantity="1">
+      <incoming>SequenceFlow_0shpvql</incoming>
+      <outgoing>SequenceFlow_0crfo2d</outgoing>
+    </userTask>
+    <sequenceFlow id="SequenceFlow_0crfo2d" sourceRef="_22" targetRef="_32"/>
+    <userTask completionQuantity="1" id="_32" implementation="##unspecified" isForCompensation="false" name="Gruppenleiter informieren" startQuantity="1">
+      <incoming>SequenceFlow_0crfo2d</incoming>
+      <incoming>_2</incoming>
+      <outgoing>SequenceFlow_13rc6g3</outgoing>
+    </userTask>
+    <sequenceFlow id="SequenceFlow_13rc6g3" sourceRef="_32" targetRef="Task_053jld4"/>
+    <serviceTask completionQuantity="1" id="Task_053jld4" implementation="##WebService" isForCompensation="false" name="NächstenProzess triggern" startQuantity="1">
+      <extensionElements>
+        <localData xmlns="appsist:bpmn:annotations">
+          <string key="completedMeasureId">
+                        http://www.appsist.de/ontology/bul/cffbc9dc-1f37-11e5-b5f7-727283247c7f
+                    </string>
+          <string key="requestedMeasureId">
+                        http://www.appsist.de/ontology/bul/cffbd2a6-1f37-11e5-b5f7-727283247c7f
+                    </string>
+          <string key="targetGroup">http://www.appsist.de/ontology/bul/ArbeitsplatzgruppeWerkzeugbau</string>
+        </localData>
+        <events xmlns="appsist:bpmn:annotations">
+          <event eventId="measureCompleted" type="onEnd">
+            <properties>
+              <entry key="measureId" reference="completedMeasureId"/>
+              <entry key="targetGroup" reference="targetGroup"/>
+              <object key="context">
+                <entry key="jobId" reference="jobId"/>
+              </object>
+            </properties>
+          </event>
+          <event eventId="measureRequested" type="onEnd">
+            <properties>
+              <entry key="measureId" reference="requestedMeasureId"/>
+              <entry key="targetGroup" reference="targetGroup"/>
+              <object key="context">
+                <entry key="jobId" reference="jobId"/>
+              </object>
+            </properties>
+          </event>
+        </events>
+      </extensionElements>
+      <incoming>SequenceFlow_13rc6g3</incoming>
+      <outgoing>SequenceFlow_0gv0ygy</outgoing>
+    </serviceTask>
+    <sequenceFlow id="SequenceFlow_0gv0ygy" sourceRef="Task_053jld4" targetRef="EndEvent_1ob6ah2"/>
+    <endEvent id="EndEvent_1ob6ah2" name="End Event">
+      <incoming>SequenceFlow_0gv0ygy</incoming>
+      <incoming>SequenceFlow_1l3d3mv</incoming>
+      <inputSet/>
+    </endEvent>
+    <sequenceFlow id="SequenceFlow_1l3d3mv" name="ja" sourceRef="ExclusiveGateway_16n2v7z" targetRef="EndEvent_1ob6ah2"/>
+    <sequenceFlow id="_2" name="vielleicht" sourceRef="ExclusiveGateway_16n2v7z" targetRef="_32"/>
+  </process>
+  <bpmndi:BPMNDiagram id="Yaoqiang_Diagram-cffbc9dc-1f37-11e5-b5f7-727283247c7f" name="Untitled Diagram" resolution="96.0">
+    <bpmndi:BPMNPlane bpmnElement="cffbc9dc-1f37-11e5-b5f7-727283247c7f">
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="Yaoqiang-StartEvent_1">
+        <dc:Bounds height="32.0" width="32.0" x="173.0" y="102.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8046875" width="100.0" x="140.5" y="138.09765625"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_18" id="Yaoqiang-_18">
+        <dc:Bounds height="80.0" width="100.0" x="141.0" y="224.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="46.8046875" width="89.0" x="146.5" y="242.59765625"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="ExclusiveGateway_16n2v7z" id="Yaoqiang-ExclusiveGateway_16n2v7z" isMarkerVisible="true">
+        <dc:Bounds height="42.0" width="42.0" x="166.0" y="396.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8046875" width="229.0" x="76.5" y="446.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_22" id="Yaoqiang-_22">
+        <dc:Bounds height="80.0" width="100.0" x="395.0" y="381.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.8046875" width="76.0" x="407.0" y="406.59765625"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_32" id="Yaoqiang-_32">
+        <dc:Bounds height="80.0" width="100.0" x="395.0" y="532.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.8046875" width="84.0" x="403.0" y="557.59765625"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_053jld4" id="Yaoqiang-Task_053jld4">
+        <dc:Bounds height="80.0" width="100.0" x="395.0" y="684.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.8046875" width="90.0" x="400.0" y="709.59765625"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="EndEvent_1ob6ah2" id="Yaoqiang-EndEvent_1ob6ah2">
+        <dc:Bounds height="32.0" width="32.0" x="427.0" y="847.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8046875" width="62.0" x="413.5" y="882.358086085651"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0ks789s" id="Yaoqiang-SequenceFlow_0ks789s">
+        <di:waypoint x="189.0" y="134.0"/>
+        <di:waypoint x="189.0" y="224.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8046875" width="6.0" x="186.0" y="169.59765625"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0gv0ygy" id="Yaoqiang-SequenceFlow_0gv0ygy">
+        <di:waypoint x="443.0" y="764.0"/>
+        <di:waypoint x="443.0" y="847.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8046875" width="6.0" x="440.0" y="796.09765625"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_13rc6g3" id="Yaoqiang-SequenceFlow_13rc6g3">
+        <di:waypoint x="445.0" y="612.0"/>
+        <di:waypoint x="445.0" y="684.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8046875" width="6.0" x="442.0" y="638.59765625"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0crfo2d" id="Yaoqiang-SequenceFlow_0crfo2d">
+        <di:waypoint x="445.0" y="461.0"/>
+        <di:waypoint x="445.0" y="532.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8046875" width="6.0" x="442.0" y="487.09765625"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1l3d3mv" id="Yaoqiang-SequenceFlow_1l3d3mv">
+        <di:waypoint x="191.0" y="434.0"/>
+        <di:waypoint x="191.0" y="865.0"/>
+        <di:waypoint x="427.12549213361245" y="865.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8046875" width="16.0" x="183.0" y="758.1604023168062"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2" id="Yaoqiang-_2">
+        <di:waypoint x="208.0" y="417.0"/>
+        <di:waypoint x="273.9049455889738" y="507.4264697129067"/>
+        <di:waypoint x="395.0" y="572.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8046875" width="55.0" x="246.40494558897382" y="512.6927106610262"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0shpvql" id="Yaoqiang-SequenceFlow_0shpvql">
+        <di:waypoint x="208.0" y="417.0"/>
+        <di:waypoint x="395.0" y="421.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8046875" width="30.0" x="286.5" y="409.59765625"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_029280b" id="Yaoqiang-SequenceFlow_029280b">
+        <di:waypoint x="187.0" y="304.0"/>
+        <di:waypoint x="187.0" y="396.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8046875" width="6.0" x="184.0" y="340.59765625"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
